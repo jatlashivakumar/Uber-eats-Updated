@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch, AiFillTag } from 'react-icons/ai';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { FaUserFriends, FaWallet } from 'react-icons/fa';
 import { MdFavorite, MdHelp } from 'react-icons/md';
 import { BsFillSaveFill } from 'react-icons/bs';
-import { AiFillTag } from 'react-icons/ai';
 import { data, data1 } from '../components/data/data.jsx';
 
 const Navbar = () => {
@@ -113,14 +112,13 @@ const Navbar = () => {
         </nav>
       </div>
 
-     
       {searchQuery && (
         <div className='absolute top-[70px] left-0 w-full bg-white z-10 p-4'>
           {filteredData.length > 0 ? (
             <ul>
               {filteredData.map(item => (
                 <li key={item.id} className='p-2 border-b'>
-                  <img src={item.image} alt={item.name} className='w-20 h-20  inline-block mr-4' />
+                  <img src={item.image} alt={item.name} className='w-20 h-20 inline-block mr-4' />
                   <span className='font-bold'>{item.name}</span> - {item.price}
                 </li>
               ))}
