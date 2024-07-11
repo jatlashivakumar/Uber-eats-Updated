@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineSearch, AiFillTag } from 'react-icons/ai';
-import { TbTruckDelivery } from 'react-icons/tb';
-import { FaUserFriends, FaWallet } from 'react-icons/fa';
-import { MdFavorite, MdHelp } from 'react-icons/md';
-import { BsFillSaveFill } from 'react-icons/bs';
 import { data, data1 } from '../components/data/data.jsx';
 
 const Navbar = () => {
@@ -33,7 +28,8 @@ const Navbar = () => {
     <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       <div className='flex items-center'>
         <div onClick={() => setNav(!nav)}>
-          <AiOutlineMenu size={30} />
+          {/* Menu icon */}
+          <div style={{ fontSize: 30 }}>☰</div>
         </div>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
           Uber <span className='font-bold'>Eats</span>
@@ -45,7 +41,8 @@ const Navbar = () => {
 
       {/* Search input */}
       <div className='bg-gray-200 rounded-md flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-        <AiOutlineSearch size={25} />
+        {/* Search icon */}
+        <div style={{ fontSize: 25 }}>🔍</div>
         <input
           className='bg-transparent p-2 w-full focus:outline-none'
           type='text'
@@ -70,42 +67,43 @@ const Navbar = () => {
             : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300'
         }
       >
-        <AiOutlineClose
+        <div
           onClick={() => setNav(!nav)}
-          size={30}
-          className='absolute top-4 right-4 cursor-pointer'
-        />
+          style={{ fontSize: 30, position: 'absolute', top: 16, right: 16, cursor: 'pointer' }}
+        >
+          ✖
+        </div>
         <h2 className='text-2xl p-4'>
-          Best <span className='font-bold'>Eats</span>
+          Uber <span className='font-bold'>Eats</span>
         </h2>
         <nav>
           <ul className='flex flex-col p-4 text-gray-800'>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <TbTruckDelivery size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>🚚</span>
               Orders
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <MdFavorite size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>❤️</span>
               Favourites
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <FaWallet size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>💼</span>
               Wallet
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <MdHelp size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>❓</span>
               Help
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <AiFillTag size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>🏷️</span>
               Promotions
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <BsFillSaveFill size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>💾</span>
               Best Ones
             </li>
             <li className='text-xl py-4 flex cursor-pointer'>
-              <FaUserFriends size={25} className='mr-4' />
+              <span style={{ fontSize: 25 }} className='mr-4'>👫</span>
               Invite Friends
             </li>
           </ul>
