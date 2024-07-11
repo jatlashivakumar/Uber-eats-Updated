@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className='flex items-center'>
         <div onClick={() => setNav(!nav)}>
           {/* Menu icon */}
-          <div style={{ fontSize: 30 }}>☰</div>
+          <div className='cursor-pointer' style={{ fontSize: 30 }}>☰</div>
         </div>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
           Uber <span className='font-bold'>Eats</span>
